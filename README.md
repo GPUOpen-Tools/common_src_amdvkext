@@ -1,1 +1,1 @@
-# common-src-AmdVkExt
+The Vulkan header files are originally from https://github.com/GPUOpen-Drivers/xgl/tree/dev/icd/api/include/khronos/devext

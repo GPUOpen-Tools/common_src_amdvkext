@@ -1,7 +1,7 @@
 /*
  ***********************************************************************************************************************
  *
- *  Copyright (c) 2014-2018 Advanced Micro Devices, Inc. All Rights Reserved.
+ *  Copyright (c) 2014-2019 Advanced Micro Devices, Inc. All Rights Reserved.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -34,6 +34,7 @@
 
 #include "vk_internal_ext_helper.h"
 
+#define VK_AMD_gpa_interface                             1
 #define VK_AMD_GPA_INTERFACE_SPEC_VERSION                1
 #define VK_AMD_GPA_INTERFACE_EXTENSION_NAME              "VK_AMD_gpa_interface"
 
@@ -90,8 +91,22 @@ typedef enum VkGpaPerfBlockAMD
     VK_GPA_PERF_BLOCK_EA_AMD              = 29,
     VK_GPA_PERF_BLOCK_RPB_AMD             = 30,
     VK_GPA_PERF_BLOCK_RMI_AMD             = 31,
+    VK_GPA_PERF_BLOCK_UMCCH_AMD           = 32,
+    VK_GPA_PERF_BLOCK_GE_AMD              = 33,
+    VK_GPA_PERF_BLOCK_GL1A_AMD            = 34,
+    VK_GPA_PERF_BLOCK_GL1C_AMD            = 35,
+    VK_GPA_PERF_BLOCK_GL1CG_AMD           = 36,
+    VK_GPA_PERF_BLOCK_GL2A_AMD            = 37,
+    VK_GPA_PERF_BLOCK_GL2C_AMD            = 38,
+    VK_GPA_PERF_BLOCK_CHA_AMD             = 39,
+    VK_GPA_PERF_BLOCK_CHC_AMD             = 40,
+    VK_GPA_PERF_BLOCK_CHCG_AMD            = 41,
+    VK_GPA_PERF_BLOCK_GUS_AMD             = 42,
+    VK_GPA_PERF_BLOCK_GCR_AMD             = 43,
+    VK_GPA_PERF_BLOCK_PH_AMD              = 44,
+    VK_GPA_PERF_BLOCK_UTCL1_AMD           = 45,
     VK_GPA_PERF_BLOCK_BEGIN_RANGE_AMD     = VK_GPA_PERF_BLOCK_CPF_AMD,
-    VK_GPA_PERF_BLOCK_END_RANGE_AMD       = VK_GPA_PERF_BLOCK_RMI_AMD,
+    VK_GPA_PERF_BLOCK_END_RANGE_AMD       = VK_GPA_PERF_BLOCK_UTCL1_AMD,
     VK_GPA_PERF_BLOCK_RANGE_SIZE_AMD      = (VK_GPA_PERF_BLOCK_END_RANGE_AMD - VK_GPA_PERF_BLOCK_BEGIN_RANGE_AMD + 1),
     VK_GPA_PERF_BLOCK_MAX_ENUM_AMD        = 0x7FFFFFFF
 } VkGpaPerfBlockAMD;
